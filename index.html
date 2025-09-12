@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLAREWADJOU MULTISERVICES - Le bon choix à moindre coût</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables et réinitialisation */
+        :root {
+            --primary: #2563eb; /* Bleu - confiance */
+            --secondary: #16a34a; /* Vert - fiabilité */
+            --light: #f8fafc; /* Blanc clair - clarté */
+            --dark: #1e293b; /* Noir pour textes */
+            --accent: #f59e0b; /* Orange pour accents */
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typographie */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header et Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 1.5rem;
+            position: relative;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:not(.btn):after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:not(.btn) {
+            color: var(--primary);
+        }
+
+        .nav-menu a:hover:not(.btn):after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark);
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bac.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero .btn {
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition);
+        }
+
+        .btn:hover:after {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #15803d;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            color: var(--primary);
+        }
+
+        /* Services Partenaires - Nouvelle section améliorée */
+        .partner-services-section {
+            background: linear-gradient(to right, #f8fafc, #e2e8f0);
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .partner-services-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+
+        .partner-services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .partner-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .partner-service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .partner-service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .partner-service-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .partner-service-card:hover .partner-service-image {
+            transform: scale(1.05);
+        }
+
+        .partner-service-content {
+            padding: 2rem;
+            position: relative;
+        }
+
+        .partner-service-badge {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .partner-service-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .partner-service-description {
+            margin-bottom: 1.5rem;
+            color: #64748b;
+        }
+
+        .partner-service-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .partner-service-gallery-item {
+            height: 70px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .partner-service-gallery-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .partner-service-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Témoignages */
+        .testimonials {
+            background-color: #f1f5f9;
+            position: relative;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-text:before {
+            content: """;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+
+        /* Partenaires */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .partner-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            cursor: pointer;
+            transform: translateY(0);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-card img {
+            max-width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .partner-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Galeries de partenaires */
+        .gallery-section {
+            display: none;
+            padding: 2rem 0;
+        }
+
+        .gallery-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-button:hover {
+            color: var(--secondary);
+            transform: translateX(-5px);
+        }
+
+        .back-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Formulaire */
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .footer-contact li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: 1rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Pages cachées initialement */
+        .page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--dark);
+            transform: rotate(90deg);
+        }
+
+        /* Modal Galerie */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .gallery-modal-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-modal-img {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-modal.show .gallery-modal-img {
+            transform: scale(1);
+        }
+
+        .gallery-modal-caption {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .gallery-modal-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 3001;
+        }
+
+        .gallery-modal-close:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: rotate(90deg);
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            transform: translateY(-50%);
+            z-index: 3001;
+        }
+
+        .gallery-nav-btn {
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .gallery-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 4rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                flex-direction: column;
+                background-color: white;
+                width: 80%;
+                height: 100vh;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 5rem 2rem 2rem;
+                transition: 0.4s;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1.5rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .header-container {
+                padding: 1rem;
+            }
+
+            .gallery-nav {
+                padding: 0 1rem;
+            }
+
+            .gallery-nav-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+
+            .gallery-modal-close {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .partner-services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partner-service-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logg.jpg" alt="OLAREWADJOU MULTISERVICES">
+                <div class="logo-text">OLAREWADJOU MULTISERVICES</div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="nav-link" data-page="home">Accueil</a></li>
+                <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="#" class="nav-link" data-page="about">À Propos</a></li>
+                <li><a href="#" class="btn btn-primary" id="contactBtn">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page d'accueil -->
+    <div class="page active" id="home">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Vos besoins, notre expertise</h1>
+                <p>OLAREWADJOU MULTISERVICES vous accompagne dans tous vos besoins numériques et administratifs avec rapidité et professionnalisme.</p>
+                <a href="#" class="btn btn-primary" id="serviceBtn">Je veux un service</a>
+            </div>
+        </section>
+
+        <!-- Services Principaux -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Nos Services Principaux</h2>
+                <p class="text-center">Des solutions complètes pour vos besoins administratifs et numériques</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Services administratifs" class="service-img">
+                        <div class="service-content">
+                            <h3>Services Administratifs</h3>
+                            <p>Obtention de pièces administratives (ANIP, passeport, visite technique, TVM, assurance...)</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Services Administratifs">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Services numériques" class="service-img">
+                        <div class="service-content">
+                            <h3>Services Numériques</h3>
+                            <p>Paiement en ligne des factures, réalisation de factures normalisées, création d'établissement 100% en ligne</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Services Numériques">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Conception graphique" class="service-img">
+                        <div class="service-content">
+                            <h3>Conception Graphique</h3>
+                            <p>Création de flyers, faire-part, cartes d'invitation, autocollants, porte-clés, etc.</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Conception Graphique">Demander ce service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Études et Conseils -->
+        <section class="section" style="background-color: #f1f5f9;">
+            <div class="container">
+                <h2 class="text-center">Services Études et Conseils</h2>
+                <p class="text-center">Expertise professionnelle pour le développement de votre entreprise</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Réalisation de bilan" class="service-img">
+                        <div class="service-content">
+                            <h3>Réalisation de Bilan</h3>
+                            <p>Établissement de bilans financiers complets pour une vision claire de votre entreprise</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Réalisation de Bilan">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Démarches administratives" class="service-img">
+                        <div class="service-content">
+                            <h3>Démarches Administratives</h3>
+                            <p>Attestation fiscale, paiement CNSS, Attestation de Non faillite et bien plus</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Démarches Administratives">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Planification patrimoniale" class="service-img">
+                        <div class="service-content">
+                            <h3>Planification Patrimoniale</h3>
+                            <p>Services complets de planification patrimoniale pour sécuriser votre avenir</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Planification Patrimoniale">Demander ce service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Autres Services -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Nos Autres Services</h2>
+                <p class="text-center">Une gamme complète de solutions pour répondre à tous vos besoins</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Services GSM" class="service-img">
+                        <div class="service-content">
+                            <h3>Services Opération GSM</h3>
+                            <p>Transfert d'argent, vente de crédit et forfait, obtention de SIMs marchandes</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Services Opération GSM">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Location de voiture" class="service-img">
+                        <div class="service-content">
+                            <h3>Location de Voiture</h3>
+                            <p>Location de voiture avec ou sans conducteur pour tous vos déplacements</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Location de Voiture">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Services de livraison" class="service-img">
+                        <div class="service-content">
+                            <h3>Services de Livraison</h3>
+                            <p>Service de livraison rapide et sécurisé dans toute la ville</p>
+                            <a href="#" class="btn btn-secondary service-request" data-service="Services de Livraison">Demander ce service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Partenaires - Nouvelle section améliorée -->
+        <section class="section partner-services-section">
+            <div class="container">
+                <div class="partner-services-header">
+                    <h2>Nos Services Partenaires</h2>
+                    <p>Découvrez nos services partenaires de qualité pour une expérience complète</p>
+                </div>
+                
+                <div class="partner-services-grid">
+                    <!-- Service Partenaire 1 -->
+                    <div class="partner-service-card">
+                        <img src="acc.jpg" alt="Label Bien-Être" class="partner-service-image" id="labelBienEtreImg">
+                        <div class="partner-service-content">
+                            <span class="partner-service-badge">Partenaire</span>
+                            <h3 class="partner-service-title">Label Bien-Être</h3>
+                            <p class="partner-service-description">Services de bien-être et de relaxation pour prendre soin de vous au quotidien. Massages, soins esthétiques et programmes de détente personnalisés.</p>
+                            
+                            <div class="partner-service-gallery">
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Massage">
+                                </div>
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Soin visage">
+                                </div>
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Yoga">
+                                </div>
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Méditation">
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="btn btn-primary service-request" data-service="Label Bien-Être">Découvrir ce service</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Partenaire 2 -->
+                    <div class="partner-service-card">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Conciergerie Premium" class="partner-service-image">
+                        <div class="partner-service-content">
+                            <span class="partner-service-badge">Partenaire</span>
+                            <h3 class="partner-service-title">Conciergerie Premium</h3>
+                            <p class="partner-service-description">Service de conciergerie haut de gamme pour simplifier votre quotidien. Réservations, organisation d'événements et services personnalisés.</p>
+                            
+                            <div class="partner-service-gallery">
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Réservation">
+                                </div>
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Événement">
+                                </div>
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Voyage">
+                                </div>
+                                <div class="partner-service-gallery-item" data-src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80">
+                                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Service client">
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="btn btn-primary service-request" data-service="Conciergerie Premium">Découvrir ce service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Témoignages -->
+        <section class="section testimonials">
+            <div class="container">
+                <h2 class="text-center">Ce que disent nos clients</h2>
+                <p class="text-center">La satisfaction de nos clients est notre priorité absolue</p>
+                
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            J'ai fait appel à OLAREWADJOU MULTISERVICES pour l'obtention de mon passeport et j'ai été agréablement surpris par la rapidité et le professionnalisme. Je recommande vivement !
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Koffi A.">
+                            <div>
+                                <h4>Koffi A.</h4>
+                                <p>Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            Service de qualité exceptionnelle ! J'ai pu régler toutes mes démarches administratives en un seul endroit. Gain de temps assuré.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Aïcha T.">
+                            <div>
+                                <h4>Aïcha T.</h4>
+                                <p>Commerçante</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            Le service de conception graphique a parfaitement capturé l'essence de mon entreprise. Les designs étaient créatifs et professionnels.
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Marc K.">
+                            <div>
+                                <h4>Marc K.</h4>
+                                <p>Restaurateur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partenaires -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Nos Partenaires</h2>
+                <p class="text-center">Nous collaborons avec les meilleurs pour vous offrir un service de qualité</p>
+                
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/150x80/2563eb/ffffff?text=Partner+1" alt="Partenaire 1">
+                        <h4>Entreprise A</h4>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/150x80/16a34a/ffffff?text=Partner+2" alt="Partenaire 2">
+                        <h4>Entreprise B</h4>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/150x80/f59e0b/ffffff?text=Partner+3" alt="Partenaire 3">
+                        <h4>Entreprise C</h4>
+                    </div>
+                    
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/150x80/1e293b/ffffff?text=Partner+4" alt="Partenaire 4">
+                        <h4>Entreprise D</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page Services -->
+    <div class="page" id="services">
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="back-button" id="backToHome">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </div>
+                
+                <h2>Tous nos services</h2>
+                <p>Découvrez l'ensemble de nos services pour répondre à tous vos besoins</p>
+                
+                <!-- Contenu des services détaillés -->
+                <div class="services-grid">
+                    <!-- Services Administratifs -->
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Services administratifs" class="service-img">
+                        <div class="service-content">
+                            <h3>Services Administratifs</h3>
+                            <p>Nous vous accompagnons dans toutes vos démarches administratives pour vous faciliter la vie :</p>
+                            <ul>
+                                <li>Obtention de passeport</li>
+                                <li>Carte nationale d'identité</li>
+                                <li>Visite technique automobile</li>
+                                <li>Assurance véhicule</li>
+                                <li>TVM et autres documents</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary service-request" data-service="Services Administratifs">Demander ce service</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Autres services détaillés -->
+                    <!-- Le contenu serait similaire pour chaque service -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page À Propos -->
+    <div class="page" id="about">
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="back-button" id="backToHome2">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </div>
+                
+                <h2>À propos de nous</h2>
+                <p>Découvrez l'histoire et les valeurs d'OLAREWADJOU MULTISERVICES</p>
+                
+                <!-- Contenu À Propos -->
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3>Notre histoire</h3>
+                        <p>Fondée en 2010, OLAREWADJOU MULTISERVICES est née de la volonté de simplifier les démarches administratives et numériques pour les particuliers et les professionnels.</p>
+                        <p>Au fil des années, nous avons élargi notre champ d'action pour proposer une gamme complète de services répondant aux besoins divers de notre clientèle.</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3>Notre mission</h3>
+                        <p>Notre mission est de vous offrir des services de qualité, avec un professionnalisme et une efficacité qui font notre réputation.</p>
+                        <p>Nous nous engageons à vous faire gagner du temps et à vous apporter des solutions adaptées à vos besoins.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <h3>Nos valeurs</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem;">
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <h4 style="color: var(--primary);">Professionnalisme</h4>
+                            <p>Nous mettons un point d'honneur à fournir un service de qualité avec une équipe compétente et formée.</p>
+                        </div>
+                        
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <h4 style="color: var(--primary);">Efficacité</h4>
+                            <p>Nous nous engageons à traiter vos demandes dans les meilleurs délais avec rapidité et précision.</p>
+                        </div>
+                        
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <h4 style="color: var(--primary);">Accessibilité</h4>
+                            <p>Nos services sont accessibles à tous, avec des tarifs compétitifs et transparents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de contact -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeContactModal">&times;</span>
+            <h2>Contactez-nous</h2>
+            <p>Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Nom complet</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Adresse email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Numéro de téléphone</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service" class="form-label">Service demandé</label>
+                    <select id="service" class="form-control" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="Services Administratifs">Services Administratifs</option>
+                        <option value="Services Numériques">Services Numériques</option>
+                        <option value="Conception Graphique">Conception Graphique</option>
+                        <option value="Réalisation de Bilan">Réalisation de Bilan</option>
+                        <option value="Démarches Administratives">Démarches Administratives</option>
+                        <option value="Planification Patrimoniale">Planification Patrimoniale</option>
+                        <option value="Services Opération GSM">Services Opération GSM</option>
+                        <option value="Location de Voiture">Location de Voiture</option>
+                        <option value="Services de Livraison">Services de Livraison</option>
+                        <option value="Label Bien-Être">Label Bien-Être</option>
+                        <option value="Conciergerie Premium">Conciergerie Premium</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Galerie -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <span class="gallery-modal-close" id="closeGalleryModal">&times;</span>
+            <img src="" alt="" class="gallery-modal-img" id="galleryModalImg">
+            <div class="gallery-modal-caption" id="galleryModalCaption"></div>
+            <div class="gallery-nav">
+                <div class="gallery-nav-btn" id="prevGalleryBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="gallery-nav-btn" id="nextGalleryBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="logg.jpg" alt="OLAREWADJOU MULTISERVICES">
+                        <div class="logo-text" style="color: white;">OLAREWADJOU MULTISERVICES</div>
+                    </div>
+                    <p>Vos besoins, notre expertise. Nous vous accompagnons dans tous vos projets avec professionnalisme et efficacité.</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Nos services</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#" style="color: #ddd; text-decoration: none;">Services Administratifs</a></li>
+                        <li><a href="#" style="color: #ddd; text-decoration: none;">Services Numériques</a></li>
+                        <li><a href="#" style="color: #ddd; text-decoration: none;">Conception Graphique</a></li>
+                        <li><a href="#" style="color: #ddd; text-decoration: none;">Services Études et Conseils</a></li>
+                        <li><a href="#" style="color: #ddd; text-decoration: none;">Services Partenaires</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Contact</h3>
+                    <ul class="footer-contact" style="list-style: none;">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Avenue de la République, Lomé</li>
+                        <li><i class="fas fa-phone"></i> +228 90 12 34 56</li>
+                        <li><i class="fas fa-envelope"></i> contact@olarewadjou.com</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 9h-13h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 OLAREWADJOU MULTISERVICES. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation et interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Éléments du DOM
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const contactBtn = document.getElementById('contactBtn');
+            const serviceBtn = document.getElementById('serviceBtn');
+            const contactModal = document.getElementById('contactModal');
+            const closeContactModal = document.getElementById('closeContactModal');
+            const contactForm = document.getElementById('contactForm');
+            const serviceSelect = document.getElementById('service');
+            const backToHome = document.getElementById('backToHome');
+            const backToHome2 = document.getElementById('backToHome2');
+            const serviceRequestBtns = document.querySelectorAll('.service-request');
+            const labelBienEtreImg = document.getElementById('labelBienEtreImg');
+            const galleryModal = document.getElementById('galleryModal');
+            const closeGalleryModal = document.getElementById('closeGalleryModal');
+            const galleryModalImg = document.getElementById('galleryModalImg');
+            const galleryModalCaption = document.getElementById('galleryModalCaption');
+            const prevGalleryBtn = document.getElementById('prevGalleryBtn');
+            const nextGalleryBtn = document.getElementById('nextGalleryBtn');
+            const galleryItems = document.querySelectorAll('.partner-service-gallery-item');
+            
+            // Variables pour la galerie
+            let currentGalleryIndex = 0;
+            let currentGalleryItems = [];
+            
+            // Menu mobile
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Navigation entre les pages
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // Masquer toutes les pages
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Afficher la page cible
+                    document.getElementById(targetPage).classList.add('active');
+                    
+                    // Fermer le menu mobile si ouvert
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    // Remonter en haut de la page
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Boutons de retour à l'accueil
+            if (backToHome) {
+                backToHome.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Masquer toutes les pages
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Afficher la page d'accueil
+                    document.getElementById('home').classList.add('active');
+                    
+                    // Remonter en haut de la page
+                    window.scrollTo(0, 0);
+                });
+            }
+            
+            if (backToHome2) {
+                backToHome2.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Masquer toutes les pages
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Afficher la page d'accueil
+                    document.getElementById('home').classList.add('active');
+                    
+                    // Remonter en haut de la page
+                    window.scrollTo(0, 0);
+                });
+            }
+            
+            // Ouvrir modal de contact
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    contactModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            if (serviceBtn) {
+                serviceBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    contactModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            // Fermer modal de contact
+            if (closeContactModal) {
+                closeContactModal.addEventListener('click', function() {
+                    contactModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // Clic en dehors du modal pour fermer
+            window.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    contactModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+                
+                if (e.target === galleryModal) {
+                    closeGalleryModal.click();
+                }
+            });
+            
+            // Soumission du formulaire de contact
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Récupérer les valeurs du formulaire
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const service = document.getElementById('service').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Ici, vous enverriez normalement les données à un serveur
+                    // Pour cet exemple, nous affichons simplement une alerte
+                    alert(`Merci ${name} pour votre demande de service pour ${service}. Nous vous contacterons rapidement au ${phone} ou à l'adresse ${email}.`);
+                    
+                    // Réinitialiser le formulaire
+                    contactForm.reset();
+                    
+                    // Fermer le modal
+                    contactModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // Boutons de demande de service
+            serviceRequestBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const service = this.getAttribute('data-service');
+                    
+                    // Ouvrir le modal de contact
+                    contactModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Pré-remplir le service demandé
+                    if (serviceSelect) {
+                        serviceSelect.value = service;
+                    }
+                });
+            });
+            
+            // Galerie - Clic sur l'image principale du Label Bien-Être
+            if (labelBienEtreImg) {
+                labelBienEtreImg.addEventListener('click', function() {
+                    openGallery(0, Array.from(galleryItems).slice(0, 4));
+                });
+            }
+            
+            // Galerie - Clic sur les miniatures
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    const parentGallery = this.closest('.partner-service-gallery');
+                    const items = parentGallery.querySelectorAll('.partner-service-gallery-item');
+                    openGallery(index, Array.from(items));
+                });
+            });
+            
+            // Ouvrir la galerie
+            function openGallery(index, items) {
+                currentGalleryIndex = index;
+                currentGalleryItems = items;
+                
+                const imgSrc = items[index].getAttribute('data-src');
+                galleryModalImg.src = imgSrc;
+                galleryModalCaption.textContent = items[index].querySelector('img').alt;
+                
+                galleryModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Fermer la galerie
+            if (closeGalleryModal) {
+                closeGalleryModal.addEventListener('click', function() {
+                    galleryModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // Navigation dans la galerie
+            if (prevGalleryBtn) {
+                prevGalleryBtn.addEventListener('click', function() {
+                    navigateGallery(-1);
+                });
+            }
+            
+            if (nextGalleryBtn) {
+                nextGalleryBtn.addEventListener('click', function() {
+                    navigateGallery(1);
+                });
+            }
+            
+            // Navigation au clavier dans la galerie
+            document.addEventListener('keydown', function(e) {
+                if (galleryModal.classList.contains('show')) {
+                    if (e.key === 'ArrowLeft') {
+                        navigateGallery(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        navigateGallery(1);
+                    } else if (e.key === 'Escape') {
+                        closeGalleryModal.click();
+                    }
+                }
+            });
+            
+            function navigateGallery(direction) {
+                currentGalleryIndex += direction;
+                
+                if (currentGalleryIndex < 0) {
+                    currentGalleryIndex = currentGalleryItems.length - 1;
+                } else if (currentGalleryIndex >= currentGalleryItems.length) {
+                    currentGalleryIndex = 0;
+                }
+                
+                const imgSrc = currentGalleryItems[currentGalleryIndex].getAttribute('data-src');
+                galleryModalImg.src = imgSrc;
+                galleryModalCaption.textContent = currentGalleryItems[currentGalleryIndex].querySelector('img').alt;
+            }
+            
+            // Animation au défilement
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.service-card, .partner-service-card, .testimonial-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Initialiser les éléments animés
+            const animatedElements = document.querySelectorAll('.service-card, .partner-service-card, .testimonial-card');
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Écouter l'événement de défilement
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Déclencher une première fois pour les éléments déjà visibles
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>

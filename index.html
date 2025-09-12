@@ -948,7 +948,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -969,18 +968,15 @@
         </div>
     </header>
 
-    <!-- Page d'accueil -->
     <div class="page active" id="home">
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h1>Vos besoins, notre expertise</h1>
                 <p>OLAREWADJOU MULTISERVICES vous accompagne dans tous vos besoins numériques et administratifs avec rapidité et professionnalisme.</p>
-                <a href="#" class="btn btn-primary" id="serviceBtn">Je veux un service</a>
+                <a href="#" class="btn btn-primary service-request" data-service="Demande générale">Je veux un service</a>
             </div>
         </section>
 
-        <!-- Services Principaux -->
         <section class="section">
             <div class="container">
                 <h2 class="text-center">Nos Services Principaux</h2>
@@ -1017,7 +1013,6 @@
             </div>
         </section>
 
-        <!-- Services Études et Conseils -->
         <section class="section" style="background-color: #f1f5f9;">
             <div class="container">
                 <h2 class="text-center">Services Études et Conseils</h2>
@@ -1042,19 +1037,10 @@
                         </div>
                     </div>
                     
-                    <div class="service-card">
-                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Planification patrimoniale" class="service-img">
-                        <div class="service-content">
-                            <h3>Planification Patrimoniale</h3>
-                            <p>Services complets de planification patrimoniale pour sécuriser votre avenir</p>
-                            <a href="#" class="btn btn-secondary service-request" data-service="Planification Patrimoniale">Demander ce service</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Autres Services -->
         <section class="section">
             <div class="container">
                 <h2 class="text-center">Nos Autres Services</h2>
@@ -1091,7 +1077,6 @@
             </div>
         </section>
 
-        <!-- Services Partenaires - Nouvelle section améliorée -->
         <section class="section partner-services-section">
             <div class="container">
                 <div class="partner-services-header">
@@ -1100,7 +1085,6 @@
                 </div>
                 
                 <div class="partner-services-grid">
-                    <!-- Service Partenaire 1 -->
                     <div class="partner-service-card">
                         <img src="acc.jpg" alt="Label Bien-Être" class="partner-service-image" id="labelBienEtreImg">
                         <div class="partner-service-content">
@@ -1127,7 +1111,6 @@
                         </div>
                     </div>
                     
-                    <!-- Service Partenaire 2 -->
                     <div class="partner-service-card">
                         <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Conciergerie Premium" class="partner-service-image">
                         <div class="partner-service-content">
@@ -1157,7 +1140,6 @@
             </div>
         </section>
 
-        <!-- Témoignages -->
         <section class="section testimonials">
             <div class="container">
                 <h2 class="text-center">Ce que disent nos clients</h2>
@@ -1206,7 +1188,6 @@
             </div>
         </section>
 
-        <!-- Partenaires -->
         <section class="section">
             <div class="container">
                 <h2 class="text-center">Nos Partenaires</h2>
@@ -1237,7 +1218,6 @@
         </section>
     </div>
 
-    <!-- Page Services -->
     <div class="page" id="services">
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
@@ -1248,9 +1228,7 @@
                 <h2>Tous nos services</h2>
                 <p>Découvrez l'ensemble de nos services pour répondre à tous vos besoins</p>
                 
-                <!-- Contenu des services détaillés -->
                 <div class="services-grid">
-                    <!-- Services Administratifs -->
                     <div class="service-card">
                         <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Services administratifs" class="service-img">
                         <div class="service-content">
@@ -1267,14 +1245,11 @@
                         </div>
                     </div>
                     
-                    <!-- Autres services détaillés -->
-                    <!-- Le contenu serait similaire pour chaque service -->
-                </div>
+                    </div>
             </div>
         </section>
     </div>
 
-    <!-- Page À Propos -->
     <div class="page" id="about">
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
@@ -1285,7 +1260,6 @@
                 <h2>À propos de nous</h2>
                 <p>Découvrez l'histoire et les valeurs d'OLAREWADJOU MULTISERVICES</p>
                 
-                <!-- Contenu À Propos -->
                 <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
                     <div style="flex: 1; min-width: 300px;">
                         <h3>Notre histoire</h3>
@@ -1323,22 +1297,17 @@
         </section>
     </div>
 
-    <!-- Modal de contact -->
     <div class="modal" id="contactModal">
         <div class="modal-content">
             <span class="close-modal" id="closeContactModal">&times;</span>
-            <h2>Contactez-nous</h2>
-            <p>Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement</p>
+            <h2>Demande de service</h2>
+            <p>Remplissez le formulaire ci-dessous et nous vous recontacterons sur WhatsApp.</p>
             
             <form id="contactForm">
+                <input type="hidden" id="requestedService" name="requestedService">
                 <div class="form-group">
                     <label for="name" class="form-label">Nom complet</label>
                     <input type="text" id="name" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email" class="form-label">Adresse email</label>
-                    <input type="email" id="email" class="form-control" required>
                 </div>
                 
                 <div class="form-group">
@@ -1347,34 +1316,15 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="service" class="form-label">Service demandé</label>
-                    <select id="service" class="form-control" required>
-                        <option value="">Sélectionnez un service</option>
-                        <option value="Services Administratifs">Services Administratifs</option>
-                        <option value="Services Numériques">Services Numériques</option>
-                        <option value="Conception Graphique">Conception Graphique</option>
-                        <option value="Réalisation de Bilan">Réalisation de Bilan</option>
-                        <option value="Démarches Administratives">Démarches Administratives</option>
-                        <option value="Planification Patrimoniale">Planification Patrimoniale</option>
-                        <option value="Services Opération GSM">Services Opération GSM</option>
-                        <option value="Location de Voiture">Location de Voiture</option>
-                        <option value="Services de Livraison">Services de Livraison</option>
-                        <option value="Label Bien-Être">Label Bien-Être</option>
-                        <option value="Conciergerie Premium">Conciergerie Premium</option>
-                    </select>
+                    <label for="details" class="form-label">Détails de votre demande</label>
+                    <textarea id="details" class="form-control" required placeholder="Ex: Je souhaite une assurance véhicule pour une Toyota Corolla."></textarea>
                 </div>
                 
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" class="form-control" required></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+                <button type="submit" class="btn btn-primary">Envoyer sur WhatsApp</button>
             </form>
         </div>
     </div>
 
-    <!-- Modal Galerie -->
     <div class="gallery-modal" id="galleryModal">
         <div class="gallery-modal-content">
             <span class="gallery-modal-close" id="closeGalleryModal">&times;</span>
@@ -1391,7 +1341,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1424,8 +1373,8 @@
                 <div>
                     <h3>Contact</h3>
                     <ul class="footer-contact" style="list-style: none;">
-                        <li><i class="fas fa-map-marker-alt"></i>Apko-Misserété </li>
-                        <li><i class="fas fa-phone"></i> +2290197028173</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Akpo-Missérété</li>
+                        <li><i class="fas fa-phone"></i> +229 01 97 02 81 73</li>
                         <li><i class="fas fa-envelope"></i> olarewadjoumultiservices@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 9h-13h</li>
                     </ul>
@@ -1442,17 +1391,14 @@
         // Navigation et interactions
         document.addEventListener('DOMContentLoaded', function() {
             // Éléments du DOM
-            const serviceRequestBtns = document.querySelectorAll('.service-request')
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navMenu = document.getElementById('navMenu');
             const navLinks = document.querySelectorAll('.nav-link');
             const pages = document.querySelectorAll('.page');
             const contactBtn = document.getElementById('contactBtn');
-            const serviceBtn = document.getElementById('serviceBtn');
             const contactModal = document.getElementById('contactModal');
             const closeContactModal = document.getElementById('closeContactModal');
             const contactForm = document.getElementById('contactForm');
-            const serviceSelect = document.getElementById('service');
             const backToHome = document.getElementById('backToHome');
             const backToHome2 = document.getElementById('backToHome2');
             const serviceRequestBtns = document.querySelectorAll('.service-request');
@@ -1464,7 +1410,8 @@
             const prevGalleryBtn = document.getElementById('prevGalleryBtn');
             const nextGalleryBtn = document.getElementById('nextGalleryBtn');
             const galleryItems = document.querySelectorAll('.partner-service-gallery-item');
-            
+            const requestedServiceInput = document.getElementById('requestedService');
+
             // Variables pour la galerie
             let currentGalleryIndex = 0;
             let currentGalleryItems = [];
@@ -1533,19 +1480,23 @@
                     window.scrollTo(0, 0);
                 });
             }
-            
-            // Ouvrir modal de contact
-            if (contactBtn) {
-                contactBtn.addEventListener('click', function(e) {
+
+            // Ouvrir le modal de contact et pré-remplir le service
+            serviceRequestBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
                     e.preventDefault();
+                    const serviceName = this.getAttribute('data-service');
+                    
+                    requestedServiceInput.value = serviceName; // Met à jour le champ caché
                     contactModal.classList.add('show');
                     document.body.style.overflow = 'hidden';
                 });
-            }
-            
-            if (serviceBtn) {
-                serviceBtn.addEventListener('click', function(e) {
+            });
+
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function(e) {
                     e.preventDefault();
+                    requestedServiceInput.value = "Demande générale";
                     contactModal.classList.add('show');
                     document.body.style.overflow = 'hidden';
                 });
@@ -1571,87 +1522,32 @@
                 }
             });
             
-            // Soumission du formulaire de contact
+            // Gérer la soumission du formulaire et la redirection vers WhatsApp
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
-                    // Récupérer les valeurs du formulaire
+
                     const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
                     const phone = document.getElementById('phone').value;
-                    const service = document.getElementById('service').value;
-                    const message = document.getElementById('message').value;
+                    const details = document.getElementById('details').value;
+                    const service = requestedServiceInput.value;
+
+                    // Numéro de téléphone WhatsApp
+                    const whatsappNumber = "+2290197028173"; 
+
+                    // Construire le message WhatsApp
+                    const message = `Bonjour OLAREWADJOU MULTISERVICES, je suis ${name}. J'ai un besoin pour le service *${service}*. Voici mon numéro: ${phone}.%0A%0ADétails de la demande: ${details}`;
                     
-serviceRequestBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const service = this.getAttribute('data-service');
+                    // Rediriger vers WhatsApp
+                    window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-        // Gérer le cas spécial pour les services administratifs
-        if (service === "Services Administratifs") {
-            // Ouvrir la nouvelle modale "Services Administratifs"
-            // Pré-remplir les champs si nécessaire
-            // Rediriger vers WhatsApp après la soumission
-        } else {
-            // Pour tous les autres services, utiliser une modale générique
-            // qui redirige directement vers WhatsApp
-            contactModal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-            
-            // Pré-remplir le service demandé
-            if (serviceSelect) {
-                serviceSelect.value = service;
-            }
-
-            // Mettre à jour la fonction de soumission
-            contactForm.onsubmit = function(event) {
-                event.preventDefault();
-
-                const name = document.getElementById('name').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
-
-                // Numéro de téléphone WhatsApp
-                const whatsappNumber = "NUMERO_DE_TELEPHONE_WHATSAPP"; // Remplacer par le numéro de l'entreprise
-
-                // Construire le message WhatsApp
-                const whatsappMessage = `Bonjour, je suis ${name} et je souhaite avoir des informations sur le service : *${service}*. %0A%0AVoici mon message : ${message}. %0A%0AMerci.`;
-
-                // Redirection
-                window.location.href = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-            };
-        }
-    });
-});
-
-// ... (le reste du code)
-                    // Réinitialiser le formulaire
-                    contactForm.reset();
-                    
-                    // Fermer le modal
+                    // Fermer le modal après la redirection
                     contactModal.classList.remove('show');
                     document.body.style.overflow = 'auto';
+                    contactForm.reset();
                 });
             }
-            
-            // Boutons de demande de service
-            serviceRequestBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const service = this.getAttribute('data-service');
-                    
-                    // Ouvrir le modal de contact
-                    contactModal.classList.add('show');
-                    document.body.style.overflow = 'hidden';
-                    
-                    // Pré-remplir le service demandé
-                    if (serviceSelect) {
-                        serviceSelect.value = service;
-                    }
-                });
-            });
-            
+
             // Galerie - Clic sur l'image principale du Label Bien-Être
             if (labelBienEtreImg) {
                 labelBienEtreImg.addEventListener('click', function() {
@@ -1761,3 +1657,4 @@ serviceRequestBtns.forEach(btn => {
     </script>
 </body>
 </html>
+

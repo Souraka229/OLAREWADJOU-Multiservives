@@ -1432,76 +1432,79 @@
             const prevGalleryBtn = document.getElementById('prevGalleryBtn');
             const nextGalleryBtn = document.getElementById('nextGalleryBtn');
             const galleryItems = document.querySelectorAll('.partner-service-gallery-item');
-            
+
             // Variables pour la galerie
             let currentGalleryIndex = 0;
             let currentGalleryItems = [];
-            
+
+            // Numéro WhatsApp
+            const whatsappNumber = "2290197028173"; // Remplacez par votre numéro au format international sans +
+
             // Menu mobile
             mobileMenuBtn.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
                 mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
                     '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             });
-            
+
             // Navigation entre les pages
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetPage = this.getAttribute('data-page');
-                    
+
                     // Masquer toutes les pages
                     pages.forEach(page => {
                         page.classList.remove('active');
                     });
-                    
+
                     // Afficher la page cible
                     document.getElementById(targetPage).classList.add('active');
-                    
+
                     // Fermer le menu mobile si ouvert
                     navMenu.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    
+
                     // Remonter en haut de la page
                     window.scrollTo(0, 0);
                 });
             });
-            
+
             // Boutons de retour à l'accueil
             if (backToHome) {
                 backToHome.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     // Masquer toutes les pages
                     pages.forEach(page => {
                         page.classList.remove('active');
                     });
-                    
+
                     // Afficher la page d'accueil
                     document.getElementById('home').classList.add('active');
-                    
+
                     // Remonter en haut de la page
                     window.scrollTo(0, 0);
                 });
             }
-            
+
             if (backToHome2) {
                 backToHome2.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     // Masquer toutes les pages
                     pages.forEach(page => {
                         page.classList.remove('active');
                     });
-                    
+
                     // Afficher la page d'accueil
                     document.getElementById('home').classList.add('active');
-                    
+
                     // Remonter en haut de la page
                     window.scrollTo(0, 0);
                 });
             }
-            
+
             // Ouvrir modal de contact
             if (contactBtn) {
                 contactBtn.addEventListener('click', function(e) {
@@ -1510,7 +1513,7 @@
                     document.body.style.overflow = 'hidden';
                 });
             }
-            
+
             if (serviceBtn) {
                 serviceBtn.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1518,7 +1521,7 @@
                     document.body.style.overflow = 'hidden';
                 });
             }
-            
+
             // Fermer modal de contact
             if (closeContactModal) {
                 closeContactModal.addEventListener('click', function() {
@@ -1526,68 +1529,67 @@
                     document.body.style.overflow = 'auto';
                 });
             }
-            
+
             // Clic en dehors du modal pour fermer
             window.addEventListener('click', function(e) {
                 if (e.target === contactModal) {
                     contactModal.classList.remove('show');
                     document.body.style.overflow = 'auto';
                 }
-                
+
                 if (e.target === galleryModal) {
                     closeGalleryModal.click();
                 }
             });
-            
-            // Soumission du formulaire de contact
+
+            // Soumission du formulaire de contact - Redirection vers WhatsApp
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
+
                     // Récupérer les valeurs du formulaire
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const phone = document.getElementById('phone').value;
                     const service = document.getElementById('service').value;
                     const message = document.getElementById('message').value;
-                    
-                    // Ici, vous enverriez normalement les données à un serveur
-                    // Pour cet exemple, nous affichons simplement une alerte
-                    alert(`Merci ${name} pour votre demande de service pour ${service}. Nous vous contacterons rapidement au ${phone} ou à l'adresse ${email}.`);
-                    
+
+                    // Créer le message pour WhatsApp
+                    const whatsappMessage = `Bonjour, je suis ${name}.%0A%0AJe souhaite obtenir le service suivant : ${service}.%0A%0AMon message : ${message}%0A%0AMon numéro de téléphone : ${phone}${email ? '%0AMon adresse email : ' + email : ''}`;
+
+                    // Rediriger vers WhatsApp
+                    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+
                     // Réinitialiser le formulaire
                     contactForm.reset();
-                    
+
                     // Fermer le modal
                     contactModal.classList.remove('show');
                     document.body.style.overflow = 'auto';
                 });
             }
-            
-            // Boutons de demande de service
+
+            // Boutons de demande de service - Redirection directe vers WhatsApp
             serviceRequestBtns.forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
                     const service = this.getAttribute('data-service');
                     
-                    // Ouvrir le modal de contact
-                    contactModal.classList.add('show');
-                    document.body.style.overflow = 'hidden';
-                    
-                    // Pré-remplir le service demandé
-                    if (serviceSelect) {
-                        serviceSelect.value = service;
-                    }
+                    // Créer le message pour WhatsApp
+                    const whatsappMessage = `Bonjour,%0A%0AJe suis intéressé(e) par votre service : ${service}.%0A%0APouvez-vous me fournir plus d'informations ?`;
+
+                    // Rediriger vers WhatsApp
+                    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
                 });
             });
-            
+
             // Galerie - Clic sur l'image principale du Label Bien-Être
             if (labelBienEtreImg) {
                 labelBienEtreImg.addEventListener('click', function() {
                     openGallery(0, Array.from(galleryItems).slice(0, 4));
                 });
             }
-            
+
             // Galerie - Clic sur les miniatures
             galleryItems.forEach((item, index) => {
                 item.addEventListener('click', function() {
@@ -1596,20 +1598,20 @@
                     openGallery(index, Array.from(items));
                 });
             });
-            
+
             // Ouvrir la galerie
             function openGallery(index, items) {
                 currentGalleryIndex = index;
                 currentGalleryItems = items;
-                
+
                 const imgSrc = items[index].getAttribute('data-src');
                 galleryModalImg.src = imgSrc;
                 galleryModalCaption.textContent = items[index].querySelector('img').alt;
-                
+
                 galleryModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             }
-            
+
             // Fermer la galerie
             if (closeGalleryModal) {
                 closeGalleryModal.addEventListener('click', function() {
@@ -1617,20 +1619,20 @@
                     document.body.style.overflow = 'auto';
                 });
             }
-            
+
             // Navigation dans la galerie
             if (prevGalleryBtn) {
                 prevGalleryBtn.addEventListener('click', function() {
                     navigateGallery(-1);
                 });
             }
-            
+
             if (nextGalleryBtn) {
                 nextGalleryBtn.addEventListener('click', function() {
                     navigateGallery(1);
                 });
             }
-            
+
             // Navigation au clavier dans la galerie
             document.addEventListener('keydown', function(e) {
                 if (galleryModal.classList.contains('show')) {
@@ -1643,36 +1645,36 @@
                     }
                 }
             });
-            
+
             function navigateGallery(direction) {
                 currentGalleryIndex += direction;
-                
+
                 if (currentGalleryIndex < 0) {
                     currentGalleryIndex = currentGalleryItems.length - 1;
                 } else if (currentGalleryIndex >= currentGalleryItems.length) {
                     currentGalleryIndex = 0;
                 }
-                
+
                 const imgSrc = currentGalleryItems[currentGalleryIndex].getAttribute('data-src');
                 galleryModalImg.src = imgSrc;
                 galleryModalCaption.textContent = currentGalleryItems[currentGalleryIndex].querySelector('img').alt;
             }
-            
+
             // Animation au défilement
             function animateOnScroll() {
                 const elements = document.querySelectorAll('.service-card, .partner-service-card, .testimonial-card');
-                
+
                 elements.forEach(element => {
                     const elementPosition = element.getBoundingClientRect().top;
                     const screenPosition = window.innerHeight / 1.3;
-                    
+
                     if (elementPosition < screenPosition) {
                         element.style.opacity = 1;
                         element.style.transform = 'translateY(0)';
                     }
                 });
             }
-            
+
             // Initialiser les éléments animés
             const animatedElements = document.querySelectorAll('.service-card, .partner-service-card, .testimonial-card');
             animatedElements.forEach(element => {
@@ -1680,13 +1682,16 @@
                 element.style.transform = 'translateY(20px)';
                 element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             });
-            
+
             // Écouter l'événement de défilement
             window.addEventListener('scroll', animateOnScroll);
-            
+
             // Déclencher une première fois pour les éléments déjà visibles
             animateOnScroll();
         });
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>

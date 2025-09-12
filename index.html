@@ -1424,9 +1424,9 @@
                 <div>
                     <h3>Contact</h3>
                     <ul class="footer-contact" style="list-style: none;">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Avenue de la République, Lomé</li>
-                        <li><i class="fas fa-phone"></i> +228 90 12 34 56</li>
-                        <li><i class="fas fa-envelope"></i> contact@olarewadjou.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Apko-Misserété </li>
+                        <li><i class="fas fa-phone"></i> +2290197028173</li>
+                        <li><i class="fas fa-envelope"></i> olarewadjoumultiservices@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 9h-13h</li>
                     </ul>
                 </div>
@@ -1442,6 +1442,7 @@
         // Navigation et interactions
         document.addEventListener('DOMContentLoaded', function() {
             // Éléments du DOM
+            const serviceRequestBtns = document.querySelectorAll('.service-request')
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navMenu = document.getElementById('navMenu');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -1582,10 +1583,49 @@
                     const service = document.getElementById('service').value;
                     const message = document.getElementById('message').value;
                     
-                    // Ici, vous enverriez normalement les données à un serveur
-                    // Pour cet exemple, nous affichons simplement une alerte
-                    alert(`Merci ${name} pour votre demande de service pour ${service}. Nous vous contacterons rapidement au ${phone} ou à l'adresse ${email}.`);
-                    
+serviceRequestBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const service = this.getAttribute('data-service');
+
+        // Gérer le cas spécial pour les services administratifs
+        if (service === "Services Administratifs") {
+            // Ouvrir la nouvelle modale "Services Administratifs"
+            // Pré-remplir les champs si nécessaire
+            // Rediriger vers WhatsApp après la soumission
+        } else {
+            // Pour tous les autres services, utiliser une modale générique
+            // qui redirige directement vers WhatsApp
+            contactModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            
+            // Pré-remplir le service demandé
+            if (serviceSelect) {
+                serviceSelect.value = service;
+            }
+
+            // Mettre à jour la fonction de soumission
+            contactForm.onsubmit = function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+
+                // Numéro de téléphone WhatsApp
+                const whatsappNumber = "NUMERO_DE_TELEPHONE_WHATSAPP"; // Remplacer par le numéro de l'entreprise
+
+                // Construire le message WhatsApp
+                const whatsappMessage = `Bonjour, je suis ${name} et je souhaite avoir des informations sur le service : *${service}*. %0A%0AVoici mon message : ${message}. %0A%0AMerci.`;
+
+                // Redirection
+                window.location.href = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            };
+        }
+    });
+});
+
+// ... (le reste du code)
                     // Réinitialiser le formulaire
                     contactForm.reset();
                     
